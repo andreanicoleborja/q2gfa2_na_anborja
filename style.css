@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 6dvh;
+    overflow-x: hidden;
+}
+
+section{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+   
+}
+
+section#banner{
+    position: relative;
+    z-index: 90; 
+    h1{
+        position: relative;
+        text-align: center;
+        font-size: 3em;
+        top: 40vh;
+        color: rgb(122, 104, 104);
+        z-index: 4;
+        text-shadow: 3px 3px #1a1a30;
+    }
+}
+
+.bodies
+{
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 3;
+}
+
+#gasgiant{
+    background-image: url(media/gasgiant.gif);
+    width: 290px;
+    height: 600px;
+    animation: gasgiantmotion 60s linear infinite;
+}
+
+#blackhole{
+    background-image: url(media/blackhole.gif);
+    width: 70px;
+    height: 160px;
+    animation: blackholemotion 250s linear infinite;
+}
+
+#galaxy{
+    background-image: url(media/galaxy.gif);
+    width: 140px;
+    height: 200px;
+    animation: galaxymotion 30s linear infinite;
+}
+
+#earth{
+    background-image: url(media/earth.gif);
+    width: 60px;
+    height: 155px;
+    margin-left: 86vw;
+    margin-bottom: 30vh;
+    transform: rotateZ(7deg);
+}
+    
+
+#stars{
+    background: black url(media/stars.png);
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+#twinkling{
+    display: inline-block;
+    width:100%;
+	height: 100%;
+	background: transparent url(media/twinkling.png);
+    position: absolute;
+    animation: sparkle 20s linear infinite;
+    z-index: 2;
+}
+
+
+@keyframes gasgiantmotion{
+    0% {transform: translate(1200px, -200px);}
+    100% {transform: translate(-2500px, 1200px);}
+}
+
+@keyframes blackholemotion{
+    0%{transform:scale(.07);}
+    25%{transform: translate(100px, -200px);}
+    50%{transform: scale(3);}
+    100%{transform: translate(450px, -1300px);}
+    
+}
+
+@keyframes galaxymotion{
+    0%{transform: translate(700px, -800px);}
+    50%{transform: skew(10deg, 30deg);}
+    100%{transform: translate(1200px, 500px);}
+}
+@keyframes sparkle{
+    0%{transform:translate(0px, 0px);}
+    100%{transform:translate(500px, 0px);}
+}
